@@ -6,8 +6,8 @@ LDFLAGS=-lncurses
 
 all:  $(PROGRAM)
 
-$(PROGRAM): OneBallMain.o Board.o
-	$(LD) -o $@  OneBallMain.o Board.o $(LDFLAGS)
+$(PROGRAM): Main.o Board.o
+	$(LD) -o $@  Main.o Board.o $(LDFLAGS)
 
 Main.o:  Main.cc Board.h
 	$(CC) $(CFLAGS) $<
