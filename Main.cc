@@ -14,7 +14,7 @@ using namespace std;
 #endif
 
 void StepBall(double &ballsX, double &ballsY, double &ballDX,
-                double &ballDY, int ballColor, int width, int height) {
+                double &ballDY, int ballsColor, int width, int height) {
     double newX = ballsX + ballDX; //moves the ball forward/backwards by dx
     double newY = ballsY + ballDY; //moves the ball up/down by dy
 
@@ -97,7 +97,7 @@ int main() {
         //clears the display for the ASCII art
         currBall.SetupDisplay(width, height, ballsColor);
       
-        currBall.DrawBall(-1, -1, ballsX, ballsY, ballColor);
+        currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         getchar();
     }
       for(int step = 0; step<maxSteps; step++) {
