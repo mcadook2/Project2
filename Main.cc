@@ -96,7 +96,7 @@ int main() {
       
         
         //clears the display for the ASCII art
-        currBall.SetupDisplay(width, height, ballsColor);
+        currBall.SetupDisplay(width, height);
       
         currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         getchar();
