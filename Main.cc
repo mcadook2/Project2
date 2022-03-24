@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 #include<Board.h>
 #include<stdio.h>
 #include<stdlib.h>
