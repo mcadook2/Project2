@@ -14,7 +14,7 @@ using namespace std;
 #else <unistd.h>
 #endif
 
-void StepBall(double &ballsY, double &ballsY, double &ballDX,
+void StepBall(double &ballsX, double &ballsY, double &ballDX,
                 double &ballDY, int ballColor, int width, int height) {
     double newX = ballsX + ballDX; //moves the ball forward/backwards by dx
     double newY = ballsY + ballDY; //moves the ball up/down by dy
@@ -87,9 +87,9 @@ int main() {
 
     } while (count != ballNums):
     
-    for (int a = 0; ball < ballNums; ball++) { 
+    for (int a = 0; a < ballNums; a++) { 
 
-        currBall = BallList.at(ball);
+        currBall = BallList.at(a);
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
         ballsColor = currBall.GetColorLvl();
@@ -103,14 +103,14 @@ int main() {
     }
 
     for(int step = 0; step<maxSteps; step++) {
-        for (int b = 0; ball < ballNums; ball++) { 
+        for (int b = 0; b < ballNums; b++) { 
 
-            currBall = BallList.at(ball));
+            currBall = BallList.at(b));
             ballsX = currBall.GetX();
             ballsY = currBall.GetY();
             ballsDX = currBall.GetDX();
             ballsDY = currBall.GetDY();
-            ballColor = currBall.GetColorLvl();
+            ballsColor = currBall.GetColorLvl();
             
             MillisecondsDelay(50);
 
