@@ -44,9 +44,9 @@ void StepBall(double &ballsX, double &ballsY, double &ballDX,
 
 void MillisecondsDelay(int millisec) {
     #ifdef _Win32
-        Sleep(millisec) //Takes milliseconds
+        Sleep(millisec); //Takes milliseconds
     #else
-        usleep(millisec*1000) //Takes nanoseconds
+        usleep(millisec*1000); //Takes nanoseconds
     #endif
 }
 
