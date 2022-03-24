@@ -52,8 +52,8 @@ void MillisecondsDelay(int millisec) {
 int main() {
 
     int ballNum;
-    double ballsx = 10;
-    double ballsy = 10;
+    double ballsX = 10;
+    double ballsY = 10;
     double ballsDX = 1;
     double ballsDY = 1;
     double ballscolor = 2;
@@ -74,7 +74,7 @@ int main() {
     do {
 
         cout << "What is the initial X and Y position of ball"<< count + 1 << "? ";
-        cin >> ballsx >> ballsy;
+        cin >> ballsX >> ballsY;
         cout << "What is the initial dX and and dY velocity of the ball" << count + 1 << "? ";
         cin >> ballsDX >> ballsDY;
         cout << "What is the color level of the ball" << count + 1 << "? ";
