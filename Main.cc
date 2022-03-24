@@ -114,7 +114,7 @@ int main() {
         ballsColor = currBall.GetColorLvl();
         ballsDX = currBall.GetDX();
         ballsDY = currBall.GetDY();
-        cout << "Moving " << currBall;
+        cout << "Moving " << b;
             
             //double oldX = ballsX;
             //double oldY = ballsY;
