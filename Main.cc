@@ -99,7 +99,7 @@ int main() {
         ballsColor = currBall.GetColorLvl();
         ballsDX = currBall.GetDX();
         ballsDY = currBall.GetDY();
-      cout << "Ball "<<a <<"- Current Color: " << ballsColor << endl;
+      cout << "Ball "<< a <<"- Current Color: " << ballsColor << endl;
       
         //currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         //getchar();
@@ -108,7 +108,7 @@ int main() {
       for(int step = 0; step<maxSteps; step++) {
          for (int b = 0; b<ballNums; b++) {   
             //MillisecondsDelay(50);
-        currBall = BallList[a];
+        currBall = BallList[b];
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
         ballsColor = currBall.GetColorLvl();
