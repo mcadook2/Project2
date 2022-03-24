@@ -10,7 +10,8 @@ using namespace std;
 //we use windows.h but the rest uses unistd.h
 #ifdef _WIN32
 #include <Windows.h>
-#else <unistd.h>
+#else
+#include <unistd.h>
 #endif
 
 void StepBall(double &ballsX, double &ballsY, double &ballDX,
