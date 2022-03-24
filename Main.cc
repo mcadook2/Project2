@@ -85,7 +85,7 @@ int main() {
 
         ++count;
 
-    } while (count != ballNums):
+    } while (count != ballNums);
     
     for (int a = 0; a < ballNums; a++) { 
 
@@ -101,11 +101,10 @@ int main() {
         currBall.DrawBall(-1, -1, ballsX, ballsY, ballColor);
         getchar();
     }
-
-    for(int step = 0; step<maxSteps; step++) {
+      for(int step = 0; step<maxSteps; step++) {
         for (int b = 0; b < ballNums; b++) { 
 
-            currBall = BallList.at(b));
+            currBall = BallList.at(b);
             ballsX = currBall.GetX();
             ballsY = currBall.GetY();
             ballsDX = currBall.GetDX();
@@ -122,7 +121,7 @@ int main() {
             currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
         }
     }
-
+  
     currBall.ShutdownDisplay();
 
     cout << "...Program Ended." << endl;
