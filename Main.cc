@@ -64,8 +64,8 @@ int main() {
     int count = 0;
 
     vector<Ball> BallList;
-    Ball ballsball;
-    Ball currball;
+    Ball newBall;
+    Ball currBall;
 
     cout << "How many balls do you want to create?";
     cin >> ballNums;
@@ -78,10 +78,10 @@ int main() {
         cout << "What is the initial dX and and dY velocity of the ball" << count + 1 << "? ";
         cin >> ballsDX >> ballsDY;
         cout << "What is the color level of the ball" << count + 1 << "? ";
-        cin >> ballscolor;
+        cin >> ballsColor;
 
-        ballsball.SetBallInfo(ballsx, ballsy, ballscolor, ballsDX, ballsDY);
-        BallList.push_back(ballsball);
+        newBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
+        BallList.push_back(newBall);
 
         ++count;
 
@@ -92,7 +92,7 @@ int main() {
     
     for (int ball = 0; ball < ballNums; ball++) { 
 
-        currball = BallList.at(ball);
+        currBall = BallList.at(ball);
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
         ballColor = currBall.GetColorLvl();
@@ -104,7 +104,7 @@ int main() {
     for(int step = 0; step<maxSteps; step++) {
         for (int ball = 0; ball < ballNums; ball++) { 
 
-            currball = BallList.at(ball));
+            currBall = BallList.at(ball));
             ballsX = currBall.GetX();
             ballsY = currBall.GetY();
             ballsDX = currBall.GetDX();
