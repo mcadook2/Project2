@@ -16,30 +16,30 @@ using namespace std;
 
 void StepBall(double &ballsY, double &ballsY, double &ballDX,
                 double &ballDY, int ballColor, int width, int height) {
-    double ballsX = ballsX + ballDX; //moves the ball forward/backwards by dx
-    double ballsY = ballsY + ballDY; //moves the ball up/down by dy
+    double newX = ballsX + ballDX; //moves the ball forward/backwards by dx
+    double newY = ballsY + ballDY; //moves the ball up/down by dy
 
-    if (ballsX < 1) {
-        ballsX = 1; //put it at the wall
+    if (newX < 1) {
+        newX = 1; //put it at the wall
         ballDX *= -1.0; //bounces ball
     }
 
-    if (ballsX > width) {
-        ballsX = width; //put it at the wall
+    if (newX > width) {
+        newX = width; //put it at the wall
         ballDX *=-1.0; //bounces ball
     }
 
-    if (ballsY < 1) {
-        ballsY = 1; //put it at the wall
+    if (newY < 1) {
+        newY = 1; //put it at the wall
         ballDY *= -1.0; //bounces ball
     }
-    if (ballsY > height) {
-        ballsY = height; //put it at the wall
+    if (newY > height) {
+        newY = height; //put it at the wall
         ballDY *= -1.0;
     }
 
-    ballX = ballsX;
-    ballY = ballsY;
+    ballsX = newX;
+    ballsY = newY;
  }
 
 void MillisecondsDelay(int millisec) {
@@ -92,7 +92,7 @@ int main() {
         currBall = BallList.at(ball);
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
-        ballColor = currBall.GetColorLvl();
+        ballsColor = currBall.GetColorLvl();
       
         
         //clears the display for the ASCII art
