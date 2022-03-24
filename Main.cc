@@ -4,7 +4,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 using namespace std;
 
 //For functions that violate the ANSI standard
@@ -51,7 +50,7 @@ void MillisecondsDelay(int millisec) {
 }
 
 int main() {
-    int ballNum;
+    int ballNums;
     double ballsX = 10;
     double ballsY = 10;
     double ballsDX = 1;
