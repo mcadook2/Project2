@@ -10,11 +10,11 @@ class Ball {
     double ballDY = 1;
         void addBall(double newx, double newy, int newcolorlevel, double newDX, double newDY);
     public:
-        double GetX const();
-        double GetY const();
-        double GetDX const();
-        double GetDY const();
-        double GetColorLvl const();
+        double GetX() const;
+        double GetY() const;
+        double GetDX() const;
+        double GetDY() const;
+        double GetColorLvl() const;
         void SetupDisplay(int &width, int &height);
         void ClearDisplay();
         void ShutdownDisplay();
