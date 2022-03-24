@@ -21,6 +21,6 @@ class Ball {
         void DrawBall(double oldX, double oldY, double newX,
         double newY, int ballColorLevel);
 
-}
+};
 
 #endif
