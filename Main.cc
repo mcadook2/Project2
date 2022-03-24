@@ -106,9 +106,7 @@ int main() {
         getchar();
     }
     
-      for(int step = 0; step<maxSteps; step++) { 
-         MillisecondsDelay(25);
-        
+      for(int step = 0; step<maxSteps; step++) {         
          for (int b = 0; b<ballNums; b++) {
            currBall = BallList[b];
            ballsX = currBall.GetX();
@@ -116,6 +114,9 @@ int main() {
            ballsColor = currBall.GetColorLvl();
            ballsDX = currBall.GetDX();
            ballsDY = currBall.GetDY();
+           
+            
+            MillisecondsDelay(50);
         
            //cout << "Moving " << b;
             
