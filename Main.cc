@@ -99,7 +99,7 @@ int main() {
         ballsColor = currBall.GetColorLvl();
         ballsDX = currBall.GetDX();
         ballsDY = currBall.GetDY();
-      cout << "Ball"<<a <<"- Current Color:" << ballsColor << endl;
+      cout << "Ball "<<a <<"- Current Color: " << ballsColor << endl;
       
         //currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         //getchar();
@@ -108,14 +108,15 @@ int main() {
       for(int step = 0; step<maxSteps; step++) {
          for (int b = 0; b<ballNums; b++) {   
             //MillisecondsDelay(50);
-
+          cout << "Moving ";
             
             //double oldX = ballsX;
             //double oldY = ballsY;
 
             //StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
             //currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
-        }
+         }
+        cout << "Now ";
     }
   
     //currBall.ShutdownDisplay();
