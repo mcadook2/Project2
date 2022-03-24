@@ -8,7 +8,7 @@ class Ball {
     int colorlevel = 2;
     double ballDX = 1;
     double ballDY = 1;
-        void addBall(double newx, double newy, int newcolorlevel, double newDX, double newDY);
+        void SetBallInfo(double newx, double newy, int newcolorlevel, double newDX, double newDY);
     public:
         double GetX() const;
         double GetY() const;
@@ -19,7 +19,7 @@ class Ball {
         void ClearDisplay();
         void ShutdownDisplay();
         void DrawBall(double oldX, double oldY, double newX,
-        double newY, int ballColorLevel);
+        double newY, int ballsColor);
 
 };
 
