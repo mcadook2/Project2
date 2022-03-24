@@ -51,7 +51,6 @@ void MillisecondsDelay(int millisec) {
 }
 
 int main() {
-
     int ballNum;
     double ballsX = 10;
     double ballsY = 10;
@@ -88,7 +87,7 @@ int main() {
 
     } while (count != ballNums):
     
-    for (int ball = 0; ball < ballNums; ball++) { 
+    for (int a = 0; ball < ballNums; ball++) { 
 
         currBall = BallList.at(ball);
         ballsX = currBall.GetX();
@@ -97,14 +96,14 @@ int main() {
       
         
         //clears the display for the ASCII art
-        myBall.SetupDisplay(width, height, ballsColor);
+        currBall.SetupDisplay(width, height, ballsColor);
       
-        myBall.DrawBall(-1, -1, ballsX, ballsY, ballColor);
+        currBall.DrawBall(-1, -1, ballsX, ballsY, ballColor);
         getchar();
     }
 
     for(int step = 0; step<maxSteps; step++) {
-        for (int ball = 0; ball < ballNums; ball++) { 
+        for (int b = 0; ball < ballNums; ball++) { 
 
             currBall = BallList.at(ball));
             ballsX = currBall.GetX();
@@ -119,13 +118,12 @@ int main() {
             double oldX = ballsX;
             double oldY = ballsY;
 
-            StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor,
-            width, height);
-            myBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
+            StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
+            currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
         }
     }
 
-    myBall.ShutdownDisplay();
+    currBall.ShutdownDisplay();
 
     cout << "...Program Ended." << endl;
     cout << "Display Dim: " << width << " " << height << endl;
