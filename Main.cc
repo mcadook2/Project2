@@ -106,9 +106,10 @@ int main() {
         getchar();
     }
     
-      for(int step = 0; step<maxSteps; step++) {
-         for (int b = 0; b<ballNums; b++) {   
+      for(int step = 0; step<maxSteps; step++) { 
             MillisecondsDelay(50);
+        
+         for (int b = 0; b<ballNums; b++) {
            currBall = BallList[b];
            ballsX = currBall.GetX();
            ballsY = currBall.GetY();
