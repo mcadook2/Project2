@@ -89,7 +89,7 @@ int main() {
   
   
         //clears the display for the ASCII art
-        currBall.SetupDisplay(width, height);
+        //currBall.SetupDisplay(width, height);
     
     for (int a = 0; a < ballNums; a++) { 
 
@@ -102,10 +102,11 @@ int main() {
       cout << "Ball"<<a <<"- Current Color:" << ballsColor << endl;
       
         //currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
-        //getchar(); }
+        //getchar();
+    }
     
       for(int step = 0; step<maxSteps; step++) {
-            
+         for (int b = 0; b<ballNums; b++) {   
             //MillisecondsDelay(50);
 
             
