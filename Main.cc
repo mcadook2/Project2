@@ -108,7 +108,13 @@ int main() {
       for(int step = 0; step<maxSteps; step++) {
          for (int b = 0; b<ballNums; b++) {   
             //MillisecondsDelay(50);
-          cout << "Moving ";
+        currBall = BallList[a];
+        ballsX = currBall.GetX();
+        ballsY = currBall.GetY();
+        ballsColor = currBall.GetColorLvl();
+        ballsDX = currBall.GetDX();
+        ballsDY = currBall.GetDY();
+        cout << "Moving " << currBall;
             
             //double oldX = ballsX;
             //double oldY = ballsY;
