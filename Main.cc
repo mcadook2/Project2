@@ -86,6 +86,10 @@ int main() {
         ++count;
 
     } while (count != ballNums);
+  
+  
+        //clears the display for the ASCII art
+        currBall.SetupDisplay(width, height);
     
     for (int a = 0; a < ballNums; a++) { 
 
@@ -93,10 +97,6 @@ int main() {
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
         ballsColor = currBall.GetColorLvl();
-      
-        
-        //clears the display for the ASCII art
-        currBall.SetupDisplay(width, height);
       
         currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         getchar();
