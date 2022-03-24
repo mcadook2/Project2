@@ -39,7 +39,7 @@ double Ball::GetDY() const {
   return dy; //returns the dy velocity
 }
 
-void Ball::SetupDisplay(int &width, int &height, int id) {
+void Ball::SetupDisplay(int &width, int &height, int colorlevel) {
     initscr(); //ncurses: Determines the type of terminal, setup ncurses
     cbreak(); //ncurses: Disable line buffering
     noecho(); //ncurses: Don't echo input back to the screen
@@ -54,7 +54,7 @@ void Ball::SetupDisplay(int &width, int &height, int id) {
     //Setup the colors
     start_color();
     
-        init_pair(id+1, COLOR_LEVELS[id], COLOR_BLACK);
+        init_pair(colorlevel+1, COLOR_LEVELS[colorlevel], COLOR_BLACK);
 
     refresh(); //ncurses: refresh the screen
 }
