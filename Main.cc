@@ -56,7 +56,7 @@ int main() {
     double ballsY = 10;
     double ballsDX = 1;
     double ballsDY = 1;
-    double ballscolor = 2;
+    double ballsColor = 2;
 
     int width;
     int height;
@@ -85,10 +85,7 @@ int main() {
 
         ++count;
 
-    } while (count != ballNums);
-
-    //clears the display for the ASCII art
-    myBall.SetupDisplay(width, height, ballColor);
+    } while (count != ballNums):
     
     for (int ball = 0; ball < ballNums; ball++) { 
 
@@ -96,7 +93,11 @@ int main() {
         ballsX = currBall.GetX();
         ballsY = currBall.GetY();
         ballColor = currBall.GetColorLvl();
+      
         
+        //clears the display for the ASCII art
+        myBall.SetupDisplay(width, height, ballsColor);
+      
         myBall.DrawBall(-1, -1, ballsX, ballsY, ballColor);
         getchar();
     }
@@ -117,9 +118,9 @@ int main() {
             double oldX = ballsX;
             double oldY = ballsY;
 
-            StepBall(ballsX, ballsY, ballDX, ballDY, ballColor,
+            StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor,
             width, height);
-            myBall.DrawBall(oldX, oldY, ballsX, ballsY, ballColor);
+            myBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
         }
     }
 
