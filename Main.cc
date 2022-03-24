@@ -104,17 +104,8 @@ int main() {
       
         currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
         getchar();
-    }
     
-      for(int step = 0; step<maxSteps; step++) {         
-         for (int b = 0; b<ballNums; b++) {
-           currBall = BallList[b];
-           ballsX = currBall.GetX();
-           ballsY = currBall.GetY();
-           ballsColor = currBall.GetColorLvl();
-           ballsDX = currBall.GetDX();
-           ballsDY = currBall.GetDY();
-           
+      for(int step = 0; step<maxSteps; step++) {           
             
             MillisecondsDelay(50);
         
