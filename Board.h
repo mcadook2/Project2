@@ -3,11 +3,11 @@
 
 class Ball {
     protected:    
-    double x = 10;
-    double y = 10;
-    double dx = 1;
-    double dy = 1;
-    int colorlevel = 2;
+    double x;
+    double y;
+    double dx;
+    double dy;
+    int colorlevel;
     public:
     void SetBallInfo(double newx, double newy, int newcolorlevel, double newDX, double newDY);
     double GetX() const;
