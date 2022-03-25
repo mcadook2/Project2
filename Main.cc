@@ -127,13 +127,16 @@ int main() {
       
       double newX = ballsX + 1;
       double newY = ballsY + 1;
+      
       ballsX = newX;
-      ballsY =newY;
+      ballsY = newY;
      // StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
      // currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
       
       currBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
-      BallList.push_back(currBall);
+      
+      replace(Ball, BallList, ballsX);
+      replace(Ball, BallList, ballsY);
       
       
     cout <<" Ball's Position: " << ballsX << " " << ballsY << endl;
