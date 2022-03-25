@@ -89,42 +89,44 @@ int main() {
   
   
     //clears the display for the ASCII art
-    currBall.SetupDisplay(width, height);
-    
-    for (int a = 0; a < ballNums; a++) { 
-
-        currBall = BallList[a];
-        ballsX = currBall.GetX();
-        ballsY = currBall.GetY();
-        ballsColor = currBall.GetColorLvl();
-        ballsDX = currBall.GetDX();
-        ballsDY = currBall.GetDY();
-      
-      //cout << "Ball "<< a <<"- Current Color: " << ballsColor << endl;
-      
-        currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
-        getchar();
-    
-      for(int step = 0; step<maxSteps; step++) {           
-            
-            MillisecondsDelay(50);
-        
-           //cout << "Moving " << b;
-            
-           double oldX = ballsX;
-           double oldY = ballsY;
-
-            StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
-            currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
-         }
-        
-        //cout << "Now ";
-    }
+  currBall.SetupDisplay(width, height);
   
-    currBall.ShutdownDisplay();
+  for (int a = 0; a < ballNums; a++) { 
 
-    cout << "...Program Ended." << endl;
-    cout << "Display Dim: " << width << " " << height << endl;
+    currBall = BallList[a];
+    ballsX = currBall.GetX();
+    ballsY = currBall.GetY();
+    ballsColor = currBall.GetColorLvl();
+    ballsDX = currBall.GetDX();
+    ballsDY = currBall.GetDY();
+      
+    //cout << "Ball "<< a <<"- Current Color: " << ballsColor << endl;
+      
+    currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
+    getchar();
+    
+    for(int step = 0; step<maxSteps; step++) {           
+            
+      MillisecondsDelay(50);
+        
+      //cout << "Moving " << b;
+            
+      double oldX = ballsX;
+      double oldY = ballsY;
 
-    return 0;
+      StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
+      currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
+      currBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
+      BallList.push_back(newBall);
+    }
+        
+    //cout << "Now ";
+  }
+ 
+  currBall.ShutdownDisplay();
+
+  cout << "...Program Ended." << endl;
+  cout << "Display Dim: " << width << " " << height << endl;
+
+  return 0;
 }
