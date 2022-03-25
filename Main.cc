@@ -101,7 +101,7 @@ int main() {
     ballsDX = currBall.GetDX();
     ballsDY = currBall.GetDY();
       
-    cout << "Ball "<< a <<"creadted" << endl;
+    cout << "Ball "<< a <<" creadted" << endl;
       
    // currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
    // getchar();
@@ -134,9 +134,10 @@ int main() {
       
       currBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
       BallList.push_back(currBall);
-    }
-        
+      
+      
     cout <<" Ball's Position: " << ballsX << " " << ballsY << endl;
+    }     
   }
  
   //currBall.ShutdownDisplay();
