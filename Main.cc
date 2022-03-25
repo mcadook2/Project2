@@ -51,7 +51,9 @@ void MillisecondsDelay(int millisec) {
 }
 
 int main() {
+  //variable for the numbers of balls
     int ballNums;
+  
     double ballsX = 10;
     double ballsY = 10;
     double ballsDX = 1;
@@ -60,19 +62,21 @@ int main() {
 
     int width;
     int height;
-    //int maxSteps = 5;
+    //int maxSteps = 5; //practice code
     int maxSteps = 500;
     int count = 0;
 
-    vector<Ball> BallList;
+  //vector class for the balls  
+  vector<Ball> BallList;
+  
+  //classes for new balls and the current ball
     Ball newBall;
     Ball currBall;
 
     cout << "How many balls do you want to create?";
-    cin >> ballNums;
-    cout << ballNums << endl;
+    cin >> ballNums; //grabs the amount of balls the user wants
 
-    do {
+    do { //ask the user about information in a do while loop
 
         cout << "What is the initial X and Y position of ball"<< count + 1 << "? ";
         cin >> ballsX >> ballsY;
@@ -82,11 +86,11 @@ int main() {
         cin >> ballsColor;
 
         newBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
-        BallList.push_back(newBall);
+        BallList.push_back(newBall); //added the new ball to the list
 
-        ++count;
+        ++count;//makes the count go up one
 
-    } while (count != ballNums);
+    } while (count != ballNums); //loop continues until the count equals the amount of balls
   
   
     //clears the display for the ASCII art
@@ -94,7 +98,10 @@ int main() {
   
   for (int a = 0; a < ballNums; a++) { 
 
+    //makes the currball class equal the information from the current ball
     currBall = BallList[a];
+    
+    //grabs the informations from the currBall
     ballsX = currBall.GetX();
     ballsY = currBall.GetY();
     ballsColor = currBall.GetColorLvl();
@@ -103,38 +110,52 @@ int main() {
       
     //cout << "Ball "<< a <<" creadted" << endl;
       
-   currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
+   //Draws the ball
+    currBall.DrawBall(-1, -1, ballsX, ballsY, ballsColor);
    getchar();
   }
+  
+  //loops for maxSteps, moving the ball each time step
   for (int step = 0; step<maxSteps; step++) {
     
+    //changes the current ball
     for(int b = 0; b < ballNums; b++){           
       
-    currBall = BallList[b];
-    ballsX = currBall.GetX();
-    ballsY = currBall.GetY();
-    ballsColor = currBall.GetColorLvl();
-    ballsDX = currBall.GetDX();
-    ballsDY = currBall.GetDY();
+      //gives the information to the current ball class
+      currBall = BallList[b];
+    
+      //grabs the current ball information
+      ballsX = currBall.GetX();
+      ballsY = currBall.GetY();
+      ballsColor = currBall.GetColorLvl();
+      ballsDX = currBall.GetDX();
+      ballsDY = currBall.GetDY();
      
-      
+      //Slows down the sim
      MillisecondsDelay(50);
         
       //cout << "Moving Ball" << b;
-            
-     double oldX = ballsX;
-     double oldY = ballsY;
+      
+      //Remember the old location of the ball
+      double oldX = ballsX;
+      double oldY = ballsY;
       
       //double newX = ballsX + 1;
       //double newY = ballsY + 1;
       
       //ballsX = newX;
       //ballsY = newY;
-     StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
-     currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
       
+      //Moves the ball one time step
+     StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
+      
+      //Draw the new position of the ball, erase the old
+      currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
+      
+      //saves the new information in current ball class
       currBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
       
+      //updated the ball's information in the vector
       BallList.at(b) = currBall;
       
       
@@ -143,7 +164,6 @@ int main() {
   }
  
   currBall.ShutdownDisplay();
-
   cout << "...Program Ended." << endl;
   cout << "Display Dim: " << width << " " << height << endl;
 
