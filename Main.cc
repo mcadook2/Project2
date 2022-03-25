@@ -127,6 +127,8 @@ int main() {
       
       double newX = ballsX + 1;
       double newY = ballsY + 1;
+      ballsX = newX;
+      ballsY =newY
      // StepBall(ballsX, ballsY, ballsDX, ballsDY, ballsColor, width, height);
      // currBall.DrawBall(oldX, oldY, ballsX, ballsY, ballsColor);
       
