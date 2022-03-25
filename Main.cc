@@ -135,8 +135,7 @@ int main() {
       
       currBall.SetBallInfo(ballsX, ballsY, ballsColor, ballsDX, ballsDY);
       
-      replace(Ball, BallList, ballsX);
-      replace(Ball, BallList, ballsY);
+      BallList.at(b) = currBall;
       
       
     cout <<" Ball's Position: " << ballsX << " " << ballsY << endl;
