@@ -11,8 +11,7 @@ const int COLOR_LEVELS[MAXCHARS] = {COLOR_WHITE, COLOR_WHITE, COLOR_YELLOW,
                                      COLOR_BLUE, COLOR_BLUE, COLOR_MAGENTA,
                                      COLOR_RED};
 
-
-//Sets the x and y position, dx and dy velocity, and colorlevel
+//Sets the x and y position, dx and dy velocity, and colorlevel to new amount given
 void Ball::SetBallInfo(double newx, double newy, int newcolorlevel, double newDX, double newDY) {
         x = newx; 
         y = newy;
